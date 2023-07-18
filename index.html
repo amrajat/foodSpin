@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foodSpin - an Front-end Project.</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="max-width-wrapper">
+      <nav class="nav">
+        <h2 class="nav__logo">foodSpin</h2>
+        <ul class="nav__list">
+          <li class="nav__list--item">
+            <a href="#" class="nav__link">Breakfast</a>
+          </li>
+          <li class="nav__list--item">
+            <a href="#" class="nav__link">Lunch</a>
+          </li>
+          <li class="nav__list--item">
+            <a href="#" class="nav__link">Dinner</a>
+          </li>
+        </ul>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="cart-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+      </nav>
+      <div class="circle">
+        <div class="container">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="max-width-wrapper content-wrapper">
+      <div class="content">
+        <div class="content__text">
+          <h2 class="heading-secondary">32$</h2>
+          <h1 class="heading-primary">Green Goddess Salad</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+            perspiciatis, nesciunt autem tempora dolorum quam repudiandae
+            quisquam placeat voluptas quod quaerat doloremque nulla similique
+          </p>
+          <button class="btn btn-order">Order Now</button>
+        </div>
+        <div class="content__overlay">
+          <button class="btn bg-primary btn-left">&leftarrow;</button>
+          <div class="center-image-wrapper">
+            <img class="center-image-main" src="./images/0-main.png" alt="" />
+          </div>
+          <button class="btn bg-primary btn-right">&rightarrow;</button>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/amrajat/foodSpin" class="github" target="_blank"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="github__icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+        />
+      </svg>
+    </a>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
