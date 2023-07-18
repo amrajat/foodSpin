@@ -1,0 +1,269 @@
+:root {
+  --primaryColor: hsl(29, 100%, 94%);
+  --secondaryColor: hsl(29, 100%, 59%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  color: hsl(0, 0%, 20%);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.max-width-wrapper {
+  max-width: 80rem;
+  padding: 1rem 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  gap: 25%;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-right: auto;
+}
+.nav__link:any-link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.nav__link:visited,
+.nav__link:hover {
+  text-decoration: underline;
+}
+.cart-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+/* CIRCLE AND BACKGROUND FOR ANIMATION */
+.container {
+  position: absolute;
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+  border: 2px dashed var(--secondaryColor);
+  transform: translate(-50%, -50%) rotate(30deg);
+  /* animation: rotation 10s infinite 1s ease-in-out; */
+  transform-origin: center center;
+  transition: all 0.5s;
+  left: 50%;
+  top: 100%;
+}
+
+.item {
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform-origin: center center;
+
+  background-image: url("");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow: hidden; */
+}
+
+.item:nth-child(3n + 1) {
+  background-image: url("../images/0.png");
+}
+
+.item:nth-child(3n + 2) {
+  background-image: url("../images/1.png");
+}
+
+.item:nth-child(3n + 3) {
+  background-image: url("../images/2.png");
+}
+.circle {
+  position: absolute;
+  width: 100rem;
+  height: 100rem;
+  background-color: var(--primaryColor);
+  transition: all 0.5s;
+  border-radius: 50%;
+  transform: translate(10%, -60%);
+  overflow: hidden;
+  z-index: -999;
+}
+
+/* CONTENT OVERLAY */
+.content-wrapper {
+  margin-top: 11.85rem;
+  transform: translateX(0.55rem);
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.content {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content > * {
+  flex-basis: 50%;
+  /* flex: 1; */
+  align-items: flex-end;
+  min-width: 638px;
+  max-width: 638px;
+}
+.content__text {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  gap: 0.5rem;
+}
+
+.content__text p {
+  width: 50ch;
+}
+.content__overlay {
+  display: flex;
+  justify-content: space-around;
+  transform: translate(0.2rem, -0.05rem);
+  align-self: stretch;
+}
+
+.content__overlay button {
+  transform: translateY(-2.5rem);
+}
+.center-image-wrapper {
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.center-image-main {
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* UTILITIES CLASSES AND TYPOGRAPHY */
+.btn-left,
+.btn-right {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  transition: all 0.5s;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-order {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  border: 0;
+  border-radius: 100px;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 1.2;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.5s;
+}
+.btn-order:hover {
+  color: #fff;
+}
+.heading-secondary {
+  font-size: 1.8rem;
+  color: var(--secondaryColor);
+  line-height: 1;
+  transition: all 0.5s;
+}
+
+.github {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+.github__icon {
+  width: 2rem;
+  height: 2rem;
+  stroke: var(--secondaryColor);
+  transition: all 0.5s;
+}
